@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unimed - Cadastro</title>
+    <style>
+        /* Fundo externo */
+        body {
+            background-color: #249637; /* Fundo claro */
+            font-family: 'Roboto', sans-serif; /* Fonte Google Fonts */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Ajustar para o topo */
+            min-height: 100%; /* Garante que o conteúdo ocupe ao menos 100% da altura da tela */
+            box-sizing: border-box;
+        }
+
+        /* Container do formulário */
+        form {
+            background-color: #ffffff; /* Fundo branco para o formulário */
+            border: solid 1px #ddd; /* Borda leve */
+            border-radius: 20px; /* Borda arredondada */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            padding: 2rem 3rem; /* Padding adaptável */
+            width: 100%;
+            max-width: 500px; /* Largura máxima */
+            margin-top: 2rem; /* Margem superior para evitar que o formulário fique colado ao topo */
+            box-sizing: border-box;
+        }
+
+        /* Título */
+        h1 {
+            text-align: center;
+            color: #249637; /* Cor do título */
+            font-size: 2rem; /* Tamanho de fonte adaptável */
+        }
+
+        /* Estilo geral para os campos */
+        div {
+            margin-bottom: 1.5rem; /* Margem ajustada */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #333;
+            font-size: 1rem;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="file"] {
+            width: 100%; /* Largura adaptável */
+            padding: 0.8rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-sizing: border-box; /* Garante que padding não aumente a largura */
+        }
+
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        /* Botão */
+        button {
+            background-color: #30bd30; /* Verde Unimed */
+            color: #ffffff;
+            padding: 1rem;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #279427; /* Cor mais escura ao passar o mouse */
+        }
+
+        /* Texto do rodapé */
+        p {
+            text-align: center;
+            color: #555;
+        }
+
+        p a {
+            color: #8b1b1b;
+            text-decoration: none;
+        }
+
+        p a:hover {
+            text-decoration: underline;
+        }
+
+        /* Media Queries para telas pequenas */
+        @media (max-width: 768px) {
+            form {
+                padding: 1.5rem; /* Menor padding em telas pequenas */
+            }
+
+            h1 {
+                font-size: 1.5rem; /* Tamanho de fonte menor */
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="password"],
+            input[type="file"],
+            button {
+                padding: 0.8rem; /* Ajuste no padding */
+                font-size: 1rem; /* Fonte um pouco menor */
+            }
+        }
+
+        /* Media Queries para telas muito pequenas (ex: smartphones) */
+        @media (max-width: 480px) {
+            form {
+                width: 90%; /* Formulário ocupa 90% da tela */
+                padding: 1rem; /* Menor padding */
+            }
+
+            h1 {
+                font-size: 1.3rem; /* Ajuste no tamanho do título */
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="password"],
+            input[type="file"],
+            button {
+                padding: 0.7rem; /* Ajuste no padding */
+                font-size: 0.9rem; /* Fonte menor */
+            }
+        }
+    </style>
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data">
+        <h1>Cadastro Unimed-Farmácias</h1>
+        <div>
+            <label for="nome">nome</label>
+            <input type="text" name="nome" id="nome" required>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+        </div>
+        <div>
+            <label for="cpf">CPF</label>
+            <input type="text" name="cpf" id="cpf" required>
+        </div>
+        <div>
+            <label for="telefone">Telefone</label>
+            <input type="text" name="telefone" id="telefone" required>
+        </div>
+        <div>
+            <label for="endereco">Endereço</label>
+            <input type="text" name="endereco" id="endereco">
+        </div>
+        <div>
+            <label for="foto">Foto</label>
+            <input type="file" name="foto" id="foto">
+        </div>
+        <div>
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" id="senha" required>
+        </div>
+        <div>
+            <input type="checkbox" name="admin" id="admin">
+            <label for="admin">Admin?</label>
+        </div>
+        <div>
+            <button type="submit">Cadastrar</button>
+        </div>
+        <p>
+            Você já é cadastrado? <a href="/login">Clique aqui!</a>
+        </p>
+    </form>
+</body>
+</html>

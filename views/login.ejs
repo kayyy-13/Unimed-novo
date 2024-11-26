@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unimed Farmácia - Login</title>
+    <!-- Importando a fonte do Google Fonts (Roboto) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos para o corpo da página */
+        body {
+            background-color: #27462c;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Faz o body ocupar a altura total da tela */
+            font-family: 'Roboto', sans-serif; /* Aplicando a fonte Roboto */
+        }
+
+        /* Container do formulário */
+        form {
+            background-color: #fff;
+            border: solid 1px black;
+            padding: 20px;
+            width: 100%;
+            max-width: 500px; /* Largura máxima */
+            box-sizing: border-box;
+            border-radius: 8px; /* Borda arredondada */
+        }
+
+        /* Estilos para os elementos do formulário */
+        div, p {
+            margin: 10px 0;
+        }
+
+        label {
+            display: block;
+            font-weight: 500; /* Peso de fonte mais forte para labels */
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 5px 0 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif; /* Garantindo que o input use Roboto também */
+        }
+
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        h1 {
+            text-align: center;
+            color: cornflowerblue;
+            font-weight: 700; /* Usando peso mais forte para o título */
+        }
+
+        button {
+            background-color: green;
+            color: aliceblue;
+            padding: 12px 20px;
+            font-size: 18px;
+            width: 100%;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-family: 'Roboto', sans-serif; /* Fonte do botão */
+        }
+
+        button:hover {
+            background-color: darkgreen;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        p a {
+            color: green;
+            text-decoration: none;
+        }
+
+        p a:hover {
+            text-decoration: underline;
+        }
+
+        /* Media Query para telas menores */
+        @media (max-width: 600px) {
+            form {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            input {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            button {
+                padding: 10px 15px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form method="post">
+        <h1>Login</h1>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+        </div>
+        <div>
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" id="senha" required>
+        </div>
+        <div>
+            <button type="submit">Logar</button>
+        </div>
+        <p>
+            Você não tem cadastro? <a href="/cadastro">Clique aqui!</a>
+        </p>
+    </form>
+</body>
+</html>
